@@ -1,14 +1,18 @@
-#include<algorithm>
 #include<iostream>
 #include <vector>
 using namespace std;
 
-void bubbleSort(vector<int> &arr){
-   for(int i=0;i<arr.size();i++){
-    for(int j=i;j<arr.size();j++){
-        if(arr[i]>arr[j])swap(arr[i],arr[j]);
+void insertionSort(vector<int> &arr) {
+    for (int i = 1; i < arr.size(); i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
     }
-   }
 }
 int main(){
     int n;
@@ -22,7 +26,7 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
-    bubbleSort(arr);
+    insertionSort(arr);
     cout<<"Sorted array is \n";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";

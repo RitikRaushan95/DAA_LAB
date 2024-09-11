@@ -15,7 +15,7 @@ void selectionSort(vector<int> &arr){
         int temp=arr[y];
         arr[y]=arr[i];
         arr[i]=temp;
-    };
+    }
    }
 
 }
