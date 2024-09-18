@@ -9,10 +9,10 @@ void bubbleSort(vector<int> &arr){
         if(arr[i]>arr[j])
         {
             swap(arr[i],arr[j]);
-            flag=true;
+           flag=true;
         }
-        if(!flag) break;
     }
+    if(!flag) break;
    }
 }
 
