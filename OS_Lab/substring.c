@@ -28,7 +28,7 @@ int main() {
             if(j==1)first=i-1;
             j++;
         }
-        last=i;
+        last=i-j+1;
     }
 
     if(j > 0) {

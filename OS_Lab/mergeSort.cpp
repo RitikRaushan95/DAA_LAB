@@ -14,7 +14,6 @@ void merge(vector<int>& arr, int l, int m, int r) {
     for (int i = 0; i < n2; i++){
         arr2.push_back(arr[m+1+i]);
     }
-        
 
     int i = 0, j = 0, k = l;
     while (i < arr1.size() && j < arr2.size()) {

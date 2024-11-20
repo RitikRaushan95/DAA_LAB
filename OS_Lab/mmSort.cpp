@@ -14,7 +14,7 @@ void mergeSort(vector<int> &arr, int l,int m,int r){
     for(int i=0;i<n2;i++){
         arr2[i]=arr[m+i+1];
     }
-
+    
     int i=0,j=0,k=l;
     while(i< arr1.size() && j<arr2.size()){
         if(arr1[i]<arr2[j]){
