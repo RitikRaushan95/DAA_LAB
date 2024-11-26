@@ -13,7 +13,7 @@ bool isSafeState(int n, int m, vector<vector<int>>& max, vector<vector<int>>& al
         }
     }
 
-    int count = 0;  // To count finished processes
+    int count = 0;
     while (count < n) {
         bool found = false;
         for (int i = 0; i < n; i++) {
@@ -32,10 +32,10 @@ bool isSafeState(int n, int m, vector<vector<int>>& max, vector<vector<int>>& al
                     for (int j = 0; j < m; j++) {
                         work[j] += allot[i][j]; // Add allocated resources back to work
                     }
-                    finish[i] = true;  // Mark the process as finished
+                    finish[i] = true;
                     count++;
                     found = true;
-                    break;  // Exit the loop and check for other processes
+                    break;
                 }
             }
         }
