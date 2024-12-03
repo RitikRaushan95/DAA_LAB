@@ -14,7 +14,7 @@ int jobSequencing(vector<int>& profits, vector<int>& deadlines) {
 
     sort(jobs.rbegin(), jobs.rend());
     int maxDeadline = *max_element(deadlines.begin(), deadlines.end());
-    vector<bool> slots(maxDeadline, false);
+    vector<bool> slots(maxDeadline+1, false);
     int maxProfit = 0;
 
     for (auto& job : jobs) {
