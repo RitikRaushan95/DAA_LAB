@@ -21,7 +21,7 @@ int knapsack(int W, vector<int>& weights, vector<int>& values, int n) {
 
 int main() {
     int n = 4; // Number of items
-    vector<int> values = {60, 100, 120, 90}; // Values of items
+   vector<int> values = {60, 100, 120, 90}; // Values of items
     vector<int> weights = {10, 20, 30, 25};  // Weights of items
     int W = 50; // Maximum weight capacity
 

@@ -42,7 +42,7 @@ int longestCommonSubsequence(string &s1, string &s2) {
 }
 
 int main() {
-    vector<int> dims = {40, 20, 30, 10, 30};
+     vector<int> dims = {40, 20, 30, 10, 30};
     cout << "Minimum number of multiplications in Matrix Chain Multiplication: "
          << matrixChainMultiplication(dims) << endl;
 
