@@ -31,11 +31,29 @@ void adjust(vector<int> &a,int i,int n){
     a[j/2]=item;
 }
 
+void heapify(vector<int> &a,int i,int n){
+    int j=2*i;
+    int item=a[i];
+    while(j<=n){
+        if(j<n && a[j]<a[j+1])j++;
+        if(a[j]<=item)break;
+        swap(a[j],a[i]);
+        i=j;
+        j=2*i;
+    }
+}
 
 void maxHeapBottomUp(vector<int> &a){
     for(int i=(a.size()-1)/2;i>=1;i--){
-        adjust(a,i,a.size()-1);
+        heapify(a,i,a.size()-1);
     }
+}
+
+int delMax(vector<int> &a){
+    int max=a[1];
+    a[1]=a[a.size()-1];
+    heapify(a,1,a.size()-1);
+    return max;
 }
 
 int main(){
@@ -47,7 +65,10 @@ int main(){
     makeArray(a,n);
     cout<<"Entered Array is: ";
     printArray(a);
-    cout<<"\n Max Heap Array using Bottom-Up Design: ";
+    cout<<"\nMax Heap Array using Bottom-Up Design: ";
     maxHeapBottomUp(a);
+    printArray(a);
+
+    cout<<"\nDeleted element is: "<<delMax(a)<<"\n";
     printArray(a);
 }
