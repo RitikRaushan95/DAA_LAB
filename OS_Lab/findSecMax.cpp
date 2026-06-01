@@ -10,7 +10,7 @@ int findKMax(vector<int> a, int k ){
 }
 int main(){
     int n;
-    cout<<"Enter the Size of the array\n";
+    cout<<"Enter the Size of the array\n: ";
     cin>>n;
     vector<int> arr(n);
     for(int i=0;i<n;i++){
@@ -19,7 +19,7 @@ int main(){
     cout<<"\n";
     cout<<"Entered array is\n";
     for(int i=0;i<n;i++){
-        cout<<arr[i];
+        cout<<arr[i]<<" ";
     }
 
     int k;

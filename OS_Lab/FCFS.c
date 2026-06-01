@@ -65,7 +65,7 @@ int main() {
         }
     }
 
-    calculateWaitingTime(P, n);
+    calculateWT(P, n);
     calculateTAT(P, n);
     displayProcesses(P, n);
 
